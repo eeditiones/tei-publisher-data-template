@@ -8,9 +8,9 @@ Nevertheless, some projects may prefer to still keep their data integrated with 
 
 ## TEI Publisher
 
-This data application template contains the `data` subcollection which should be filled with your documents.
+After forking/cloning this template repository, create a `data` subdirectory and fill it with your documents.
 
-Beyond `data` collection you will find a number of files in the template:
+Other files in the template you may need to change:
 
 * repo.xml - change `meta/target` to correspond to the collection your data app will be installed to
 * expath-pkg.xml - change `package/@abbrev` to correspond to the collection your data app will be installed to
@@ -20,7 +20,4 @@ Beyond `data` collection you will find a number of files in the template:
 * index.xql - a function module by default imported into Lucene index via `<module uri="http://teipublisher.com/index" prefix="nav" at="index.xql"/>`. Adjust functions to suit your application. When changing this module remember to reindex the data collection for the changes to be reflected by the indexes.
 * build.xml - build file, used to create a xar package with ant
 * pre-install.xql - store index configuration 
-* post-install.xql - prepare the data collections 
-
-
-
+* post-install.xql - prepare the data collections

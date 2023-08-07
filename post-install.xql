@@ -12,12 +12,4 @@ declare variable $target external;
 xmldb:create-collection($target, "data"),
 sm:chmod(xs:anyURI($target || "/data"), "rwxrwxr-x"),
 sm:chown(xs:anyURI($target || "/data"), "tei"),
-sm:chgrp(xs:anyURI($target || "/data"), "tei"),
-xmldb:create-collection($target || "/data", "playground"),
-sm:chmod(xs:anyURI($target || "/data/playground"), "rwxrwxr-x"),
-sm:chown(xs:anyURI($target || "/data/playground"), "tei"),
-sm:chgrp(xs:anyURI($target || "/data/playground"), "tei"),
-xmldb:create-collection($target || "/data", "temp"),
-sm:chmod(xs:anyURI($target || "/data/temp"), "rwxrwxr-x"),
-sm:chown(xs:anyURI($target || "/data/temp"), "tei"),
-sm:chgrp(xs:anyURI($target || "/data/temp"), "tei")
+sm:chgrp(xs:anyURI($target || "/data"), "tei")
